@@ -1,5 +1,8 @@
 # Survey Monkey to FHIR R4 Converter
 
+[![CI](https://github.com/ejakait/survey-monkey-fhir/actions/workflows/ci.yml/badge.svg)](https://github.com/USER/REPO/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/ejakait/survey-monkey-fhir/branch/main/graph/badge.svg)](https://codecov.io/gh/USER/REPO)
+
 Convert Survey Monkey survey responses to FHIR R4 compliant resources for integration with FHIR servers.
 
 ## Overview
