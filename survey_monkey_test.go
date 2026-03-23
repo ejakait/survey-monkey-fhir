@@ -30,3 +30,16 @@ func TestSeparateSimpleTextResponse(t *testing.T) {
 		})
 	}
 }
+
+func TestRemoveHTMLTags(t *testing.T) {
+	question := Questions{
+		heading: "\u003Cspan style=\"font-size: 14pt; font-family: arial, helvetica, sans-serif;\"\u003E\u003Cstrong\u003ETesting\u003C/strong\u003E\u003C/span\u003E",
+	}
+	got := question.RemoveHTMLTags()
+	want := "Testing"
+
+	log.Printf("Got=%s", got)
+	if got != want {
+		t.Errorf("RemoveHTMLTags got=%s, want=%s", got, want)
+	}
+}

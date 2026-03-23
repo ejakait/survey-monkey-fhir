@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"strings"
+
+	htmlsanitizer "github.com/microcosm-cc/bluemonday"
 )
 
 type QuestionFamily string
@@ -45,7 +47,7 @@ type Responses struct {
 	date_created    string
 	date_modified   string
 	analyze_url     string
-	pages           []Answers
+	pages           []Pages
 }
 
 func (a Answers) SeparateSimpleTextResponse() ([]string, error) {
@@ -63,4 +65,10 @@ func (a Answers) SeparateSimpleTextResponse() ([]string, error) {
 		strippedQuestionAnswers = append(strippedQuestionAnswers, strings.TrimSpace(qa))
 	}
 	return strippedQuestionAnswers, nil
+}
+
+func (q Questions) RemoveHTMLTags() string {
+	sanitizer := htmlsanitizer.StripTagsPolicy()
+	sanitized := strings.TrimSpace(sanitizer.Sanitize(q.heading))
+	return sanitized
 }
