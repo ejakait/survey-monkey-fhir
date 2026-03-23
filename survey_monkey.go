@@ -48,7 +48,7 @@ type Responses struct {
 	pages           []Answers
 }
 
-func (a Answers) SeperateSimpleTextResponse() ([]string, error) {
+func (a Answers) SeparateSimpleTextResponse() ([]string, error) {
 
 	var questionAnswers []string
 	questionAnswers = strings.Split(a.simple_text, "|")
