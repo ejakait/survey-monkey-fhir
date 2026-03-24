@@ -41,8 +41,8 @@ func TestSeparateSimpleTextResponse(t *testing.T) {
 
 	for _, tt := range testCases {
 		t.Run(tt.name, func(t *testing.T) {
-			a := Answers{simple_text: tt.simpleText}
-			got, err := a.SeparateSimpleTextResponse()
+			a := Answers{SimpleText: tt.simpleText}
+			got, err := SeparateSimpleTextResponse(a)
 
 			if !slices.Equal(got, tt.want) {
 				t.Errorf("got %v, want %v", got, tt.want)
@@ -74,9 +74,9 @@ func TestQuestionFamilyString(t *testing.T) {
 }
 func TestRemoveHTMLTags(t *testing.T) {
 	question := Questions{
-		heading: "\u003Cspan style=\"font-size: 14pt; font-family: arial, helvetica, sans-serif;\"\u003E\u003Cstrong\u003ETesting\u003C/strong\u003E\u003C/span\u003E",
+		Heading: "\u003Cspan style=\"font-size: 14pt; font-family: arial, helvetica, sans-serif;\"\u003E\u003Cstrong\u003ETesting\u003C/strong\u003E\u003C/span\u003E",
 	}
-	got := question.RemoveHTMLTags()
+	got := RemoveHTMLTags(question.Heading)
 	want := "Testing"
 
 	if got != want {
