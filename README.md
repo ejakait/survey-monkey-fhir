@@ -7,31 +7,47 @@ Convert Survey Monkey survey responses to FHIR R4 compliant resources for integr
 
 ## Overview
 
-This service transforms Survey Monkey API survey data into FHIR R4 resources including:
-- **Questionnaire** - Survey structure definition
-- **QuestionnaireResponse** - Completed survey responses
-- **Patient** - Survey respondent information
-- **Observation** - Individual answer records
+This service transforms Survey Monkey API survey data into FHIR R4 resources:
+- **QuestionnaireResponse** - Completed survey responses bundled for FHIR transaction
 
 ## Installation
 
 ```bash
-go install
+go mod download
 ```
 
 ## Usage
 
 ```bash
-go run main.go --survey-monkey-data=<path> --output=<path>
+go run cmd/main.go
 ```
 
-## Configuration
+The converter reads from `sample/input/survey_monkey.json` by default and outputs a FHIR Bundle.
 
-Configure survey-to-FHIR mappings in `mapping.yml`.
+## Features
+
+- Converts Survey Monkey JSON responses to FHIR R4 QuestionnaireResponse resources
+- Generates FHIR Bundle suitable for POSTing to a FHIR server
+- HTML tag sanitization using bluemonday
+- Batch processing of survey responses
+
+## Project Structure
+
+```
+.
+├── cmd/main.go              # Entry point
+├── internal/
+│   ├── fhir.go             # FHIR conversion logic
+│   ├── models.go           # Survey Monkey data models
+│   ├── survey_cleaner.go   # HTML sanitization utilities
+│   └── *_test.go           # Unit tests
+├── sample/input/           # Sample Survey Monkey data
+└── mapping.yml             # Field mapping configuration (future)
+```
 
 ## FHIR Output
 
-Generates a FHIR Bundle transaction for POSTing directly to a FHIR server:
+The converter produces a FHIR Bundle containing QuestionnaireResponse resources:
 
 ```bash
 curl -X POST <fhir-server>/ \
@@ -41,6 +57,6 @@ curl -X POST <fhir-server>/ \
 
 ## Requirements
 
-- Go 1.25+
+- Go 1.21+
 - Survey Monkey API data export
 - FHIR R4 compatible server
