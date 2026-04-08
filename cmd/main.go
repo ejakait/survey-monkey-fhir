@@ -52,6 +52,5 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("formated json bundle\n %s", string(formatted))
 
 }
