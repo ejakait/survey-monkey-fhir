@@ -19,17 +19,22 @@ go mod download
 ## Usage
 
 ```bash
+# Run with default input file
 go run cmd/main.go
+
+# Specify custom input file
+go run cmd/main.go -json /path/to/survey_data.json
 ```
 
-The converter reads from `sample/input/survey_monkey.json` by default and outputs a FHIR Bundle.
+The converter reads from `sample/input/survey_monkey.json` by default and outputs a FHIR Bundle to `sample/output/fhir_bundle.json`.
 
 ## Features
 
 - Converts Survey Monkey JSON responses to FHIR R4 QuestionnaireResponse resources
 - Generates FHIR Bundle suitable for POSTing to a FHIR server
-- HTML tag sanitization using bluemonday
-- Batch processing of survey responses
+- HTML tag sanitization using bluemondey
+- Batch processing of multiple survey responses
+- CLI flag support for custom input files
 
 ## Project Structure
 
@@ -37,12 +42,15 @@ The converter reads from `sample/input/survey_monkey.json` by default and output
 .
 ├── cmd/main.go              # Entry point
 ├── internal/
-│   ├── fhir.go             # FHIR conversion logic
-│   ├── models.go           # Survey Monkey data models
-│   ├── survey_cleaner.go   # HTML sanitization utilities
-│   └── *_test.go           # Unit tests
-├── sample/input/           # Sample Survey Monkey data
-└── mapping.yml             # Field mapping configuration (future)
+│   ├── fhir.go              # FHIR conversion logic
+│   ├── models.go            # Survey Monkey data models
+│   ├── survey_cleaner.go     # HTML sanitization utilities
+│   └── *_test.go            # Unit tests
+├── sample/
+│   ├── input/               # Sample Survey Monkey data
+│   └── output/              # Generated FHIR bundles
+├── mapping.yml              # Field mapping configuration (future)
+└── todo.md                  # Project tracking
 ```
 
 ## FHIR Output
@@ -52,7 +60,7 @@ The converter produces a FHIR Bundle containing QuestionnaireResponse resources:
 ```bash
 curl -X POST <fhir-server>/ \
   -H "Content-Type: application/fhir+json" \
-  -d @output.json
+  -d @sample/output/fhir_bundle.json
 ```
 
 ## Requirements
