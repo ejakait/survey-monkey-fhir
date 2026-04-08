@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"log"
 	"os"
 
@@ -35,6 +36,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
 	jsonFHIRConverter := converter.NewJsonFHIRConverter(
 		responses,
 	)
@@ -44,5 +46,12 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Printf("Bundle has %d entries\n", len(fhirBundle.Entry))
+	formatted, _ := json.MarshalIndent(fhirBundle, "", "  ")
+
+	err = ioutil.WriteFile("sample/output/fhir_bundle.json", formatted, 0644)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("formated json bundle\n %s", string(formatted))
 
 }
