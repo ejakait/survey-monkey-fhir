@@ -42,10 +42,11 @@ The converter reads from `sample/input/survey_monkey.json` by default and output
 .
 ├── cmd/main.go              # Entry point
 ├── internal/
-│   ├── fhir.go              # FHIR conversion logic
-│   ├── models.go            # Survey Monkey data models
-│   ├── survey_cleaner.go     # HTML sanitization utilities
-│   └── *_test.go            # Unit tests
+│   ├── fhir/                # FHIR conversion
+│   │   └── converter.go     # FHIR bundle generation
+│   └── survey/              # Survey Monkey data handling
+│       ├── models.go       # Data models
+│       └── cleaner.go      # HTML sanitization utilities
 ├── sample/
 │   ├── input/               # Sample Survey Monkey data
 │   └── output/              # Generated FHIR bundles
