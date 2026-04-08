@@ -26,14 +26,27 @@ func SeparateSimpleTextResponse(a Answers) ([]string, error) {
 	return strippedQuestionAnswers, nil
 }
 
-func RemoveHTMLTags(target string) string {
-	target = strings.TrimSpace(sanitizer.Sanitize(target))
-	r := strings.NewReplacer(
+func RemoveHTMLTags(r []Responses) []Responses {
+	replacer := strings.NewReplacer(
 		`\u003cbr\u003e`, "\n",
 		`\u003c`, "<",
 		`\u003e`, ">",
 		`\u0026`, "&",
 	)
-	target = r.Replace(target)
-	return target
+	for i, response := range r {
+		r[i].FirstName = strings.TrimSpace(sanitizer.Sanitize(response.FirstName))
+		r[i].LastName = strings.TrimSpace(sanitizer.Sanitize(response.LastName))
+		r[i].EmailAddress = strings.TrimSpace(sanitizer.Sanitize(response.EmailAddress))
+		for j, page := range response.Pages {
+			for k, question := range page.Questions {
+				r[i].Pages[j].Questions[k].Heading = sanitizer.Sanitize(replacer.Replace(question.Heading))
+				for l, answer := range question.Answers {
+					if answer.SimpleText != "" {
+						r[i].Pages[j].Questions[k].Answers[l].SimpleText = strings.TrimSpace(sanitizer.Sanitize(replacer.Replace(answer.SimpleText)))
+					}
+				}
+			}
+		}
+	}
+	return r
 }
