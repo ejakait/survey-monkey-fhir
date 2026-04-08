@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"fmt"
 	"io"
 	"log"
@@ -10,15 +11,16 @@ import (
 	converter "github.com/ejakait/survey-monkey-fhir/internal"
 )
 
-const jsonFile = "sample/input/survey_monkey.json"
+// const jsonFile = "sample/input/survey_monkey.json"
 
 func main() {
 	// Get Survey MonkeyJSON
 	// Marshall it to struct
 	// Map it to FHIR Resources
 	// Produce POST FHIR Transaction for Resources
-
-	file, err := os.Open(jsonFile)
+	jsonFile := flag.String("json", "sample/input/survey_monkey.json", "path to the Survey Monkey JSON file")
+	flag.Parse()
+	file, err := os.Open(*jsonFile)
 	if err != nil {
 		log.Fatal(err)
 	}
