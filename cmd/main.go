@@ -5,20 +5,14 @@ import (
 	"flag"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"log"
 	"os"
 
-	converter "github.com/ejakait/survey-monkey-fhir/internal"
+	fhir "github.com/ejakait/survey-monkey-fhir/internal/fhir"
+	"github.com/ejakait/survey-monkey-fhir/internal/survey"
 )
 
-// const jsonFile = "sample/input/survey_monkey.json"
-
 func main() {
-	// Get Survey MonkeyJSON
-	// Marshall it to struct
-	// Map it to FHIR Resources
-	// Produce POST FHIR Transaction for Resources
 	jsonFile := flag.String("json", "sample/input/survey_monkey.json", "path to the Survey Monkey JSON file")
 	flag.Parse()
 	file, err := os.Open(*jsonFile)
@@ -29,26 +23,24 @@ func main() {
 
 	byteValues, err := io.ReadAll(file)
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
-	var responses []converter.Responses
+	var responses []survey.Responses
 	err = json.Unmarshal(byteValues, &responses)
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 
-	jsonFHIRConverter := converter.NewJsonFHIRConverter(
-		responses,
-	)
+	jsonFHIRConverter := fhir.NewJsonFHIRConverter(responses)
 
-	fhirBundle, err := jsonFHIRConverter.JSONConverter()
+	fhirBundle, err := jsonFHIRConverter.JsonConverter()
 	if err != nil {
 		log.Fatal(err)
 	}
 	fmt.Printf("Bundle has %d entries\n", len(fhirBundle.Entry))
 	formatted, _ := json.MarshalIndent(fhirBundle, "", "  ")
 
-	err = ioutil.WriteFile("sample/output/fhir_bundle.json", formatted, 0644)
+	err = os.WriteFile("sample/output/fhir_bundle.json", formatted, 0644)
 	if err != nil {
 		log.Fatal(err)
 	}
