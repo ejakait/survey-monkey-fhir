@@ -1,4 +1,4 @@
-package main
+package survey
 
 import (
 	"errors"
@@ -41,8 +41,8 @@ func TestSeparateSimpleTextResponse(t *testing.T) {
 
 	for _, tt := range testCases {
 		t.Run(tt.name, func(t *testing.T) {
-			a := Answers{simple_text: tt.simpleText}
-			got, err := a.SeparateSimpleTextResponse()
+			a := Answers{SimpleText: tt.simpleText}
+			got, err := SeparateSimpleTextResponse(a)
 
 			if !slices.Equal(got, tt.want) {
 				t.Errorf("got %v, want %v", got, tt.want)
@@ -72,14 +72,36 @@ func TestQuestionFamilyString(t *testing.T) {
 		})
 	}
 }
-func TestRemoveHTMLTags(t *testing.T) {
-	question := Questions{
-		heading: "\u003Cspan style=\"font-size: 14pt; font-family: arial, helvetica, sans-serif;\"\u003E\u003Cstrong\u003ETesting\u003C/strong\u003E\u003C/span\u003E",
-	}
-	got := question.RemoveHTMLTags()
-	want := "Testing"
 
-	if got != want {
-		t.Errorf("RemoveHTMLTags got=%s, want=%s", got, want)
+func TestStripHTML(t *testing.T) {
+	testCases := []struct {
+		name  string
+		input string
+		want  string
+	}{
+		{
+			name:  "HTML tags stripped",
+			input: "<span style=\"font-size: 14pt;\"><strong>Testing</strong></span>",
+			want:  "Testing",
+		},
+		{
+			name:  "No HTML returns unchanged",
+			input: "Plain text",
+			want:  "Plain text",
+		},
+		{
+			name:  "Escaped br tag converted",
+			input: "Line 1\u003cbr\u003eLine 2",
+			want:  "Line 1Line 2",
+		},
+	}
+
+	for _, tt := range testCases {
+		t.Run(tt.name, func(t *testing.T) {
+			got := StripHTML(tt.input)
+			if got != tt.want {
+				t.Errorf("StripHTML() = %q, want %q", got, tt.want)
+			}
+		})
 	}
 }

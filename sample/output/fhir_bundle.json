@@ -1,0 +1,169 @@
+{
+  "resourceType": "Bundle",
+  "type": "batch",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "115046113841",
+        "status": "in-progress",
+        "authored": "2026-02-23T07:18:31+00:00",
+        "item": [
+          {
+            "linkId": "277239095",
+            "text": "Arztwahl...",
+            "answer": [
+              {
+                "valueString": "Annika Peters"
+              }
+            ]
+          },
+          {
+            "linkId": "277239083",
+            "text": "Wie hat dieser Arzt / diese Praxis bezogen auf die vergangenen 12 Monate …",
+            "answer": [
+              {
+                "id": "1 ... Ihnen während des Arztbesuchs das Gefühl vermittelt, dass er/sie Zeit für Sie hat?",
+                "valueString": "5 (Ausgezeichnet)"
+              },
+              {
+                "id": "2 ... Interesse an Ihrer persönlichen Situation gezeigt?",
+                "valueString": "5 (Ausgezeichnet)"
+              },
+              {
+                "id": "3 ... es Ihnen leichtgemacht, über Ihre Probleme zu sprechen?",
+                "valueString": "5 (Ausgezeichnet)"
+              },
+              {
+                "id": "4 ... Sie in Entscheidungen über Ihre medizinische Behandlung einbezogen?",
+                "valueString": "5 (Ausgezeichnet)"
+              },
+              {
+                "id": "5 ... Ihnen zugehört?",
+                "valueString": "5 (Ausgezeichnet)"
+              },
+              {
+                "id": "6 ... auf den vertraulichen Umgang mit Patienteninformationen geachtet?",
+                "valueString": "5 (Ausgezeichnet)"
+              }
+            ]
+          },
+          {
+            "linkId": "277239093",
+            "text": "Wie hat dieser Arzt / diese Praxis bezogen auf die vergangenen 12 Monate …",
+            "answer": [
+              {
+                "id": "7 ... Ihnen Ihre Beschwerden schnell lindern können?",
+                "valueString": "5 (Ausgezeichnet)"
+              },
+              {
+                "id": "8 ... Ihnen geholfen, damit Sie sich gut genug fühlten, um Ihren normalen täglichen Aktivitäten nachgehen zu können?",
+                "valueString": "5 (Ausgezeichnet)"
+              },
+              {
+                "id": "9 ... sich gründlich mit Ihren Problemen befasst?",
+                "valueString": "5 (Ausgezeichnet)"
+              },
+              {
+                "id": "10 ... Sie körperlich untersucht?",
+                "valueString": "5 (Ausgezeichnet)"
+              },
+              {
+                "id": "11 ... Ihnen Angebote zur Krankheitsvorbeugung gemacht? z.B. Impfungen, Gesundheitskontrollen",
+                "valueString": "5 (Ausgezeichnet)"
+              },
+              {
+                "id": "12 ... Ihnen den Zweck von Untersuchungen und Behandlungen erklärt?",
+                "valueString": "5 (Ausgezeichnet)"
+              }
+            ]
+          },
+          {
+            "linkId": "277239094",
+            "text": "Wie hat dieser Arzt / diese Praxis bezogen auf die vergangenen 12 Monate …",
+            "answer": [
+              {
+                "id": "13 ... Sie über das informiert, was Sie über Ihre Beschwerden bzw. Erkrankung wissen wollten?",
+                "valueString": "5 (Ausgezeichnet)"
+              },
+              {
+                "id": "14 ... Ihnen beim Umgang mit Ihren Gefühlen im Zusammenhang mit Ihrem Gesundheitszustand geholfen?",
+                "valueString": "5 (Ausgezeichnet)"
+              },
+              {
+                "id": "15 ... Ihnen erläutert, warum es wichtig ist, seine/ihre Ratschläge zu befolgen?",
+                "valueString": "5 (Ausgezeichnet)"
+              },
+              {
+                "id": "16 ... sich erinnert, wier er/sie Sie bei früheren Gesprächen behandelt und beraten hat? (individuell)... sich erkundigt, wie Sie vor dieser Konsultation behandelt und beraten wurden? (kollektiv)",
+                "valueString": "5 (Ausgezeichnet)"
+              },
+              {
+                "id": "17 ... Sie bei Überweisungen darauf vorbereitet, was Sie beim Spezialisten bzw. im Spital erwartet?",
+                "valueString": "3"
+              }
+            ]
+          },
+          {
+            "linkId": "277239084",
+            "text": "WIE WAR(EN) IN DEN VERGANGENEN 12 MONATEN …",
+            "answer": [
+              {
+                "id": "18 ... die Hilfsbereitschaft der anderen PraxismitarbeiterInnen (ausser dem Arzt bzw. der Ärztin)",
+                "valueString": "5 (Ausgezeichnet)"
+              },
+              {
+                "id": "19 ... das Angebot der Praxis an passenden Terminen?",
+                "valueString": "3"
+              },
+              {
+                "id": "20 ... die telefonische Erreichbarkeit der Praxis?",
+                "valueString": "5 (Ausgezeichnet)"
+              },
+              {
+                "id": "21 ... die Möglichkeit, den Arzt / die Ärztin selbst am Telefon zu sprechen?",
+                "valueString": "5 (Ausgezeichnet)"
+              },
+              {
+                "id": "22 ... die Wartezeiten in der Praxis?",
+                "valueString": "4"
+              },
+              {
+                "id": "23 ... die Möglichkeiten zu schneller Hilfe bei dringenden Gesundheitsproblemen?",
+                "valueString": "2"
+              }
+            ]
+          },
+          {
+            "linkId": "277239085",
+            "text": "Praxiseinrichtung",
+            "answer": [
+              {
+                "id": "24 Wie angenehm und ansprechend finden Sie die Praxiseinrichtung?",
+                "valueString": "5 (Ausgezeichnet)"
+              },
+              {
+                "id": "25 Wie beurteilen Sie die Sauberkeit der Praxis?",
+                "valueString": "5 (Ausgezeichnet)"
+              }
+            ]
+          },
+          {
+            "linkId": "277239091",
+            "text": "Schlussfragen",
+            "answer": [
+              {
+                "id": "26 Ich kann meinen Freunden diese Praxis sehr empfehlen.",
+                "valueString": "5 (Stimme voll und ganz zu)"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "QuestionnaireResponse/sm-115046113841"
+      }
+    }
+  ]
+}

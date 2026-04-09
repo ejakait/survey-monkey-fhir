@@ -1,0 +1,229 @@
+[
+  {
+    "id": "115046113841",
+    "recipient_id": "",
+    "collection_mode": "default",
+    "response_status": "partial",
+    "custom_value": "",
+    "first_name": "",
+    "last_name": "",
+    "email_address": "",
+    "ip_address": "212.213.214.168",
+    "logic_path": {},
+    "metadata": {
+      "contact": {}
+    },
+    "page_path": ["73231887", "73231888"],
+    "collector_id": "438670361",
+    "survey_id": "421382847",
+    "language": "de",
+    "custom_variables": {},
+    "edit_url": "https://www.surveymonkey.com/r/?sm=V2MzarUKmYZGS",
+    "analyze_url": "https://www.surveymonkey.com/analyze/browse/9ENvTGxg1ncyilz?respondent_id=115046113841",
+    "total_time": 3892,
+    "date_modified": "2026-02-23T08:23:23+00:00",
+    "date_created": "2026-02-23T07:18:31+00:00",
+    "href": "https://api.surveymonkey.com/v3/surveys/421388479/responses/115046113841",
+    "pages": [
+      {
+        "id": "73231887",
+        "questions": [
+          {
+            "id": "277239095",
+            "answers": [
+              {
+                "choice_id": "1945072676",
+                "simple_text": "Annika Peters"
+              }
+            ],
+            "family": "single_choice",
+            "subtype": "menu",
+            "heading": "Arztwahl..."
+          },
+          {
+            "id": "277239083",
+            "answers": [
+              {
+                "choice_id": "1945072238",
+                "row_id": "1945072239",
+                "simple_text": "1 ... Ihnen w\u00e4hrend des Arztbesuchs das Gef\u00fchl vermittelt, dass er/sie Zeit f\u00fcr Sie hat? | 5 (Ausgezeichnet)"
+              },
+              {
+                "choice_id": "1945072238",
+                "row_id": "1945072240",
+                "simple_text": "2 ... Interesse an Ihrer pers\u00f6nlichen Situation gezeigt? | 5 (Ausgezeichnet)"
+              },
+              {
+                "choice_id": "1945072238",
+                "row_id": "1945072241",
+                "simple_text": "3 ... es Ihnen leichtgemacht, \u00fcber Ihre Probleme zu sprechen? | 5 (Ausgezeichnet)"
+              },
+              {
+                "choice_id": "1945072238",
+                "row_id": "1945072242",
+                "simple_text": "4 ... Sie in Entscheidungen \u00fcber Ihre medizinische Behandlung einbezogen? | 5 (Ausgezeichnet)"
+              },
+              {
+                "choice_id": "1945072238",
+                "row_id": "1945072243",
+                "simple_text": "5 ... Ihnen zugeh\u00f6rt? | 5 (Ausgezeichnet)"
+              },
+              {
+                "choice_id": "1945072238",
+                "row_id": "1945072244",
+                "simple_text": "6 ... auf den vertraulichen Umgang mit Patienteninformationen geachtet? | 5 (Ausgezeichnet)"
+              }
+            ],
+            "family": "matrix",
+            "subtype": "single",
+            "heading": "<span style=\"font-size: 14pt; font-family: arial, helvetica, sans-serif;\"><strong>Wie hat dieser Arzt / diese Praxis bezogen auf die vergangenen 12 Monate \u2026</strong></span>"
+          },
+          {
+            "id": "277239093",
+            "answers": [
+              {
+                "choice_id": "1945072324",
+                "row_id": "1945072326",
+                "simple_text": "7 ... Ihnen Ihre Beschwerden schnell lindern k\u00f6nnen? | 5 (Ausgezeichnet)"
+              },
+              {
+                "choice_id": "1945072324",
+                "row_id": "1945072327",
+                "simple_text": "8 ... Ihnen geholfen, damit Sie sich gut genug f\u00fchlten, um Ihren normalen t\u00e4glichen Aktivit\u00e4ten nachgehen zu k\u00f6nnen? | 5 (Ausgezeichnet)"
+              },
+              {
+                "choice_id": "1945072324",
+                "row_id": "1945072328",
+                "simple_text": "9 ... sich gr\u00fcndlich mit Ihren Problemen befasst? | 5 (Ausgezeichnet)"
+              },
+              {
+                "choice_id": "1945072324",
+                "row_id": "1945072329",
+                "simple_text": "10 ... Sie k\u00f6rperlich untersucht? | 5 (Ausgezeichnet)"
+              },
+              {
+                "choice_id": "1945072324",
+                "row_id": "1945072330",
+                "simple_text": "11 ... Ihnen Angebote zur Krankheitsvorbeugung gemacht? z.B. Impfungen, Gesundheitskontrollen | 5 (Ausgezeichnet)"
+              },
+              {
+                "choice_id": "1945072324",
+                "row_id": "1945072331",
+                "simple_text": "12 ... Ihnen den Zweck von Untersuchungen und Behandlungen erkl\u00e4rt? | 5 (Ausgezeichnet)"
+              }
+            ],
+            "family": "matrix",
+            "subtype": "single",
+            "heading": "<span style=\"font-size: 14pt; font-family: arial, helvetica, sans-serif;\"><strong>Wie hat dieser Arzt / diese Praxis bezogen auf die vergangenen 12 Monate \u2026</strong></span>"
+          },
+          {
+            "id": "277239094",
+            "answers": [
+              {
+                "choice_id": "1945072338",
+                "row_id": "1945072340",
+                "simple_text": "13 ... Sie \u00fcber das informiert, was Sie \u00fcber Ihre Beschwerden bzw. Erkrankung wissen wollten? | 5 (Ausgezeichnet)"
+              },
+              {
+                "choice_id": "1945072338",
+                "row_id": "1945072341",
+                "simple_text": "14 ... Ihnen beim Umgang mit Ihren Gef\u00fchlen im Zusammenhang mit Ihrem Gesundheitszustand geholfen? | 5 (Ausgezeichnet)"
+              },
+              {
+                "choice_id": "1945072338",
+                "row_id": "1945072342",
+                "simple_text": "15 ... Ihnen erl\u00e4utert, warum es wichtig ist, seine/ihre Ratschl\u00e4ge zu befolgen? | 5 (Ausgezeichnet)"
+              },
+              {
+                "choice_id": "1945072338",
+                "row_id": "1945072343",
+                "simple_text": "16 ... sich erinnert, wier er/sie Sie bei fr\u00fcheren Gespr\u00e4chen behandelt und beraten hat? (individuell)<br>... sich erkundigt, wie Sie vor dieser Konsultation behandelt und beraten wurden? (kollektiv) | 5 (Ausgezeichnet)"
+              },
+              {
+                "choice_id": "1945072336",
+                "row_id": "1945072344",
+                "simple_text": "17 ... Sie bei \u00dcberweisungen darauf vorbereitet, was Sie beim Spezialisten bzw. im Spital erwartet? | 3"
+              }
+            ],
+            "family": "matrix",
+            "subtype": "single",
+            "heading": "<span style=\"font-size: 14pt; font-family: arial, helvetica, sans-serif;\"><strong>Wie hat dieser Arzt / diese Praxis bezogen auf die vergangenen 12 Monate \u2026</strong></span>"
+          },
+          {
+            "id": "277239084",
+            "answers": [
+              {
+                "choice_id": "1945072249",
+                "row_id": "1945072256",
+                "simple_text": "18 ... die Hilfsbereitschaft der anderen PraxismitarbeiterInnen (ausser dem Arzt bzw. der \u00c4rztin) | 5 (Ausgezeichnet)"
+              },
+              {
+                "choice_id": "1945072247",
+                "row_id": "1945072257",
+                "simple_text": "19 ... das Angebot der Praxis an passenden Terminen? | 3"
+              },
+              {
+                "choice_id": "1945072249",
+                "row_id": "1945072258",
+                "simple_text": "20 ... die telefonische Erreichbarkeit der Praxis? | 5 (Ausgezeichnet)"
+              },
+              {
+                "choice_id": "1945072249",
+                "row_id": "1945072259",
+                "simple_text": "21 ... die M\u00f6glichkeit, den Arzt / die \u00c4rztin selbst am Telefon zu sprechen? | 5 (Ausgezeichnet)"
+              },
+              {
+                "choice_id": "1945072248",
+                "row_id": "1945072260",
+                "simple_text": "22 ... die Wartezeiten in der Praxis? | 4"
+              },
+              {
+                "choice_id": "1945072246",
+                "row_id": "1945072261",
+                "simple_text": "23 ... die M\u00f6glichkeiten zu schneller Hilfe bei dringenden Gesundheitsproblemen? | 2"
+              }
+            ],
+            "family": "matrix",
+            "subtype": "single",
+            "heading": "<span style=\"font-family: arial, helvetica, sans-serif; font-size: 14pt;\"><strong>WIE WAR(EN) IN DEN VERGANGENEN 12 MONATEN \u2026</strong></span>"
+          },
+          {
+            "id": "277239085",
+            "answers": [
+              {
+                "choice_id": "1945072266",
+                "row_id": "1945072273",
+                "simple_text": "24 Wie angenehm und ansprechend finden Sie die Praxiseinrichtung? | 5 (Ausgezeichnet)"
+              },
+              {
+                "choice_id": "1945072266",
+                "row_id": "1945072274",
+                "simple_text": "25 Wie beurteilen Sie die Sauberkeit der Praxis? | 5 (Ausgezeichnet)"
+              }
+            ],
+            "family": "matrix",
+            "subtype": "single",
+            "heading": "<span style=\"font-size: 14pt; font-family: arial, helvetica, sans-serif;\"><strong>Praxiseinrichtung</strong></span>"
+          },
+          {
+            "id": "277239091",
+            "answers": [
+              {
+                "choice_id": "1945072308",
+                "row_id": "1945072317",
+                "simple_text": "26 Ich kann meinen Freunden diese Praxis sehr empfehlen. | 5 (Stimme voll und ganz zu)"
+              }
+            ],
+            "family": "matrix",
+            "subtype": "single",
+            "heading": "<span style=\"font-size: 14pt; font-family: arial, helvetica, sans-serif;\"><strong>Schlussfragen</strong></span>"
+          }
+        ]
+      },
+      {
+        "id": "73231888",
+        "questions": []
+      }
+    ]
+  }
+]
